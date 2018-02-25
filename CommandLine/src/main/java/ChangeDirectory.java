@@ -63,7 +63,7 @@ public class ChangeDirectory {
             currentDirectory = path;
         }
         else{
-            File f2 = new File (currentDirectory + "//" + path);
+            File f2 = new File (currentDirectory + "\\" + path);
             if(f2.exists() && f2.isDirectory()){
                 currentDirectory = f2.getAbsolutePath();
             }

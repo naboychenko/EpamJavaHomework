@@ -14,13 +14,15 @@ public class CommandLine {
         System.out.println("Usage: CommandLine");
         System.out.println("ls [options]");
         System.out.println("cd [filename] | [options]");
-        System.out.println("arch options");
+        System.out.println("zip [options] files");
+        System.out.println("tar [options] files");
         System.out.println("Examples:");
         System.out.println("cd -p");
         System.out.println("cd C:\\Logs");
         System.out.println("ls ");
         System.out.println("ls -r");
-        System.out.println("Command arch is not ready yet :(");
+        System.out.println("zip|tar -x file.zip");
+        System.out.println("zip|tar file1 file2 file3");
     }
 
     public void function(){
@@ -43,7 +45,8 @@ public class CommandLine {
                     cd.function();
                     currentDirectory = cd.getCurrentDirectory();
                     break;
-                case "arch":
+                case "zip":
+                case "tar":
                     Archiver.function(currentDirectory, arguments);
                     break;
                 default:
